@@ -1,6 +1,7 @@
-variables.tf
 *.lock.hcl
 *.tfstate
 *.tfstate.backup
 jenkins-infra/.terraform/
+jenkins-infra/variables.tf
 initTerraform/.terraform
+
