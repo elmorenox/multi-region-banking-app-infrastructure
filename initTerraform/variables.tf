@@ -55,3 +55,11 @@ variable "us_west_region" {
   type        = string
   default     = "us-west-2"
 }
+
+variable "aws_access_key" {
+  description = "AWS Access Key"
+}
+
+variable "aws_secret_key" {
+  description = "AWS Secret Key"
+}
