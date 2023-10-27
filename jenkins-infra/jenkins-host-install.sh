@@ -18,10 +18,11 @@ sudo systemctl enable jenkins
 
 sudo apt install -y software-properties-common
 sudo add-apt-repository -y ppa:deadsnakes/ppa
-sudo apt update
-
 sudo apt-get install -y python3.7
 sudo apt-get install -y python3.7-venv
+sudo apt-get install -y build-essential
+sudo apt-get install -y libmysqlclient-dev
+sudo apt-get install -y python3.7-dev
 
 sudo usermod -aG sudo jenkins
 
