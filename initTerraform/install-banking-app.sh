@@ -1,4 +1,8 @@
+#!/bin/bash
+export DEBIAN_FRONTEND=noninteractive
+
 sudo apt update
+sleep 15
 sudo apt install -y software-properties-common
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get install -y python3.7
@@ -7,7 +11,10 @@ sudo apt-get install -y build-essential
 sudo apt-get install -y libmysqlclient-dev
 sudo apt-get install -y python3.7-dev
 
+cd /home/ubuntu
+
 git clone https://github.com/elmorenox/multi-region-banking-app-infrastructure.git
+sleep 3
 
 cd multi-region-banking-app-infrastructure
 
