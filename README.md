@@ -309,4 +309,10 @@ To create the load balancer follow the directions in [load_balancer.md](load_bal
 
 ## Improvement
 
-The Terraform code for the VPCs is not very dynamic. The code can be improved by using a VPC module and using the module to deploy to different regions
+The Terraform code to create the VPCs is not very dynamic. As written, the code can only create two VPCs. The code can be improved by using a VPC module and using the module to deploy to different regions.
+
+The creation of the application can be included a resource in the Terraform code.
+
+The RDS database has no redundancy. At least snapshots should be taken of the database if not creating replicas.
+
+The Jenkins agent can be in a private subnet with a NAT gateway to allow the agent to connect to the internet.
