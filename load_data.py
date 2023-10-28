@@ -9,7 +9,7 @@ from flask import Flask
 app = Flask(__name__)
 #engine = create_engine('sqlite:///database.db',connect_args={'check_same_thread': False},echo=True)
 #Base.metadata.bind = engine
-DATABASE_URL = 'mysql+mysqldb://admin:abcd1234@mydatabase.csbfc4owwgd2.us-east-1.rds.amazonaws.com/banking?charset=utf8mb4'
+DATABASE_URL = '[mysql+pymysql://]{username}:{password}@{host}/{database-name}?charset=utf8mb4'
 engine = create_engine(DATABASE_URL, pool_pre_ping=True, echo=True)
 Base.metadata.bind = engine
 db = scoped_session(sessionmaker(bind=engine))

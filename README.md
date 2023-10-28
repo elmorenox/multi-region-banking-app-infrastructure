@@ -1,10 +1,10 @@
 # Retail Banking Application Deployment with Terraform and Jenkins Hosted Across Two AWS Regions
 
-*This is guide to use the infrastructure as code and application code to deploy a Flask web application to two Amazon regions (us-east-1, and us-west-2). Each region has a virtual private cloud with two public subnets each with an EC2 instance hosting the web application. The repository also includes the infrastructure as code for the Jenkins host and agent server that is used for the continuous delivery and continuous deployment pipeline. The Jenkins infrastructure is hosted in a subnet set as a variable in the Terraform code*
+**This is guide to use infrastructure as code and application code to deploy a Flask web application to two Amazon regions (us-east-1, and us-west-2). Each region has a virtual private cloud with two public subnets each with an EC2 instance hosting the web application. The repository also includes the infrastructure as code for the Jenkins host and agent server that is used for the continuous delivery and continuous deployment pipeline. The Jenkins infrastructure is hosted in a subnet set as a variable in the Terraform code**
 
-*The web application in each EC2 share a MySQL database managed by Amazon's Relational Database Service (RDS).*
+**The web application in each EC2 share a MySQL database managed by Amazon's Relational Database Service (RDS).**
 
-*Each VPC has an application load balancer that evenly distributes traffic to the EC2 instances hosting the web application.*
+**Each VPC has an application load balancer that evenly distributes traffic to the EC2 instances hosting the web application.**
 
 **Note: The the application code was cloned from [here](https://github.com/kura-labs-org/c4_deployment-6)
 
@@ -284,7 +284,7 @@ git push
 
 ## VPCs Deployed with Terraform
 
-The [Terrafrom code](/initTerraform/) creates two VPC, one in us-east-1 and another in us-west-2. Each VPC contains the following:
+The [Terrafrom code](/initTerraform/) to host the the wep app creates two VPCs, one in us-east-1 and another in us-west-2. Each VPC contains the following:
 
 - Two availability zones (data centers).
 - One internet gateway, the service that allows the vpc to connect to the public internet.
